@@ -12,20 +12,26 @@
   position: relative;
   overflow: hidden;
   background-image: url(../img/background.png);
-  background-size: 60%
+  background-size: 60%;
+
 }
 
 .clouds{
   position: absolute;
-  width: 600px;
-  animation: cloudsAnimation 20s infinite linear;
+  width:600px;
+  position: absolute;
+  right: -600px;
+}
+
+.cloudsanimation{
+  animation:cloudsAnimation 50s linear infinite;
 }
 
 .pipe{
+  right: -80px;
   position: absolute;
   bottom: 52px;
   width: 80px;
-  animation: pipe-animation 2s infinite linear;
 }
 
 .mario{
@@ -37,6 +43,36 @@
 .jump{
   animation: jump 600ms ease-out;
 }
+
+.piperun{
+  animation: pipe-animation 2s infinite linear;
+}
+
+#score{
+  height: auto;
+  width: auto;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.gameOver{
+  display: none;
+  font-family: arial;
+  position: absolute;
+  font-size: 70px;
+  left: calc(50% - 181px);
+  top: calc(50% - 40px);
+  width: 362px;
+  height: 80px;
+  color: #000000;
+
+}
+
+
+
 
 @keyframes pipe-animation{
   from{
